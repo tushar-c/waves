@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/tongue_base_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/base_tongue"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/tongue_base_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/base_tongue"
+        android:layout_marginTop="12dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        />
+
+    <TextView android:id="@+id/vallecula_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/vallecula"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/tongue_base_view"
+        />
+
+    <EditText
+        android:id="@+id/vallecula_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/vallecula"
+        android:layout_marginTop="0dp"
+        android:padding="12dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/tongue_base_text"
+        />
+
+
+    <TextView android:id="@+id/gloss_epiglott_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="@string/epiglott"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/vallecula_view"
+        />
+
+    <EditText
+        android:id="@+id/gloss_epiglott_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/epiglott"
+        android:layout_marginTop="4dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/vallecula_text"
+        />
+
+
+    <TextView android:id="@+id/tonsil_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/tonsil"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/gloss_epiglott_view"
+        />
+
+    <EditText
+        android:id="@+id/tonsil_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tonsil"
+        android:layout_marginTop="4dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/gloss_epiglott_text"
+        />
+
+
+    <TextView android:id="@+id/epiglottis_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/epiglottis"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/tonsil_view"
+        />
+
+    <EditText
+        android:id="@+id/epiglottis_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/epiglottis"
+        android:layout_marginTop="4dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/tonsil_text"
+        />
+
+
+    <TextView android:id="@+id/aef_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/aef"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/epiglottis_view"
+        />
+
+    <EditText
+        android:id="@+id/aef_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/aef"
+        android:layout_marginTop="4dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/epiglottis_text"
+        />
+
+
+    <TextView android:id="@+id/false_vocal_cord_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/false_vocal_cord"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/aef_view"
+        />
+
+    <EditText
+        android:id="@+id/false_vocal_cord_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/false_vocal_cord"
+        android:layout_marginTop="4dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/aef_text"
+        />
+
+
+    <TextView android:id="@+id/true_vocal_cord_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/true_vocal_cord"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/false_vocal_cord_view"
+        />
+
+    <EditText
+        android:id="@+id/true_vocal_cord_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/true_vocal_cord"
+        android:layout_marginTop="4dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/false_vocal_cord_text"
+        />
+
+
+    <TextView android:id="@+id/pfs_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/pfs"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/true_vocal_cord_view"
+        />
+
+    <EditText
+        android:id="@+id/pfs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/pfs"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/true_vocal_cord_view"
+        />
+
+    <TextView android:id="@+id/posterior_commissure_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="@string/posterior_commissure"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/pfs_view"
+        />
+
+    <EditText
+        android:id="@+id/posterior_commissure_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/posterior_commissure"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/pfs_text"
+        />
+
+    <TextView android:id="@+id/post_pharyngeal_wall_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="@string/post_pharyngeal_wall"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/posterior_commissure_view"
+        />
+
+    <EditText
+        android:id="@+id/post_pharyngeal_wall_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/post_pharyngeal_wall"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/posterior_commissure_text"
+        />
+
+
+    <TextView android:id="@+id/first_pass_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/first_pass"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/post_pharyngeal_wall_view"
+        />
+
+    <EditText
+        android:id="@+id/first_pass_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_pass"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/post_pharyngeal_wall_text"
+        />
+
+    <TextView android:id="@+id/second_pass_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/second_pass"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/first_pass_view"
+        />
+
+    <EditText
+        android:id="@+id/second_pass_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/second_pass"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/first_pass_text"
+        />
+
+
+    <TextView android:id="@+id/third_pass_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/third_pass"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/second_pass_view"
+        />
+
+    <EditText
+        android:id="@+id/third_pass_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/third_pass"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/second_pass_text"
+        />
+
+
+    <TextView android:id="@+id/nasopharynx_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/nasopharynx"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/third_pass_view"
+        />
+
+    <EditText
+        android:id="@+id/nasopharynx_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/nasopharynx"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/third_pass_text"
+        />
+
+
+    <TextView android:id="@+id/impression_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/impression"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/nasopharynx_view"
+        />
+
+    <EditText
+        android:id="@+id/impression_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/impression"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/nasopharynx_text"
+        />
+
+
+    <TextView android:id="@+id/patient_id_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/patient_id"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/impression_view"
+        />
+
+    <EditText
+        android:id="@+id/patient_id_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/patient_id"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:inputType="number"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/impression_text"
+        />
+
+
+    <TextView android:id="@+id/patient_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/patient_name"
+        android:inputType="number"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/patient_id_view"
+        />
+
+    <EditText
+        android:id="@+id/patient_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/patient_name"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/patient_id_text"
+        />
+
+
+    <TextView android:id="@+id/gender_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/gender"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/patient_name_view"
+        />
+
+    <EditText
+        android:id="@+id/gender_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/gender"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/patient_name_text"
+        />
+
+
+    <TextView android:id="@+id/age_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/age"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/gender_view"
+        />
+
+    <EditText
+        android:id="@+id/age_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/age"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:inputType="number"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/gender_text"
+        />
+
+
+    <TextView android:id="@+id/visit_date_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/visit_date"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/age_view"
+        />
+
+    <EditText
+        android:id="@+id/visit_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/visit_date"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:inputType="date"
+        android:layout_marginLeft="150dp"
+        android:maxLength="30"
+        android:layout_below="@id/age_text"
+        />
+    
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_data"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:layout_below="@id/visit_date_text"
+        />
+
+
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ManagOrgan</string>
+    <string name="upload_data">Upload</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="base_tongue">Base Of Tongue</string>
+    <string name="vallecula">Vallecula</string>
+    <string name="epiglott">Glosso Epiglottic Fold</string>
+    <string name="tonsil">Tonsil</string>
+    <string name="epiglottis">Epiglottis</string>
+    <string name="aef">AEF</string>
+    <string name="false_vocal_cord">False Vocal Cord</string>
+    <string name="true_vocal_cord">True Vocal Cord</string>
+    <string name="pfs">PFS</string>
+    <string name="posterior_commissure">Posterior Commissure</string>
+    <string name="post_pharyngeal_wall">Post Pharyngeal Wall</string>
+    <string name="first_pass">1st Pass</string>
+    <string name="second_pass">2nd Pass</string>
+    <string name="third_pass">3rd Pass</string>
+    <string name="nasopharynx">Nasopharynx</string>
+    <string name="impression">Impression</string>
+    <string name="patient_id">Patient ID</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="visit_date">Visit Date</string>
+</resources>
