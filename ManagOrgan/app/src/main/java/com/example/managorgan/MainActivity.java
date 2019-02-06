@@ -1,10 +1,12 @@
 package com.example.managorgan;
 
+import android.app.DatePickerDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +17,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     EditText gender_text;
     EditText age_text;
     EditText visit_date_text;
+
+    final Calendar visit_calendar = Calendar.getInstance();
 
 
     Button update_button;
@@ -77,8 +85,26 @@ public class MainActivity extends AppCompatActivity {
 
         update_button = findViewById(R.id.upload_button);
 
-        //DatabaseReference firebase_db_ref = FirebaseDatabase.getInstance().getReference();
-        //final DatabaseReference firebase_db_ref = firebase_db.getReference();
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                visit_calendar.set(Calendar.YEAR, year);
+                visit_calendar.set(Calendar.MONTH, month);
+                visit_calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                update_label();
+            }
+        };
+
+        visit_date_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(MainActivity.this, date, visit_calendar.get(Calendar.YEAR), visit_calendar.get(Calendar.MONTH),
+                        visit_calendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+
         firebase_db_ref = FirebaseDatabase.getInstance().getReference();
 
         update_button.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
                 firebase_db_ref.child(patient_id_text.getText().toString()).child(getString(R.string.age)).setValue(age_text.getText().toString());
                 firebase_db_ref.child(patient_id_text.getText().toString()).child(getString(R.string.visit_date)).setValue(visit_date_text.getText().toString());
                 firebase_db_ref.child(patient_id_text.getText().toString()).child(getString(R.string.patient_name)).setValue(patient_name_text.getText().toString());
+                firebase_db_ref.child(patient_id_text.getText().toString()).child(getString(R.string.visit_date)).setValue(visit_date_text.getText().toString());
+
 
                 Toast.makeText(MainActivity.this, "sent data", Toast.LENGTH_LONG).show();
 
@@ -123,4 +151,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+    private void update_label(){
+        String format = "dd/MM/yy";
+        SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
+        visit_date_text.setText(sdf.format(visit_calendar.getTime()));
+    }
+
 }
+
+
+
